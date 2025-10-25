@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPT人工代付链接流程，请看完后再下单，提高效率  （自动ID缺货应急方案）</title>
+    <title>人工代付充值方案（卡密售罄时）</title>
     <style>
-        /* --- 基础样式 (借鉴自你的代码) --- */
+        /* --- 基础样式 --- */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background-color: #f4f6f9;
@@ -22,10 +21,10 @@
         h1 {
             text-align: center;
             color: #1a202c;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
-        /* --- 这是核心的“图文步骤”模块 --- */
+        /* --- 步骤模块 (上文下图) --- */
         .step-block {
             background-color: #ffffff;
             border-radius: 12px;
@@ -35,26 +34,19 @@
             border: 1px solid #e2e8f0;
         }
 
-        /* --- 1. 上方的文字区域 --- */
+        /* 1. 上方的文字区域 */
         .step-text {
             padding: 30px;
         }
 
-        /* --- 2. 下方的图片区域 --- */
+        /* 2. 下方的图片区域 */
         .step-image {
             padding: 25px;
-            /* * 如果您希望图片区域有不同背景色，
-             * 可以取消下面这行注释 
-             */
-            /* background-color: #f7fafc; */
-            
-            /* * 如果您希望在文字和图片间有条分割线，
-             * 可以取消下面这行注释 
-             */
-            /* border-top: 1px solid #e2e8f0; */
+            background-color: #f7fafc; /* 图片区域浅底色 */
+            border-top: 1px solid #e2e8f0; /* 分割线 */
         }
 
-        /* --- 文本样式 (从您的代码中借鉴) --- */
+        /* --- 文本样式 --- */
         .step-text h2 {
             font-size: 1.5em;
             color: #1a202c;
@@ -62,6 +54,12 @@
             padding-bottom: 10px;
             margin-top: 0;
             margin-bottom: 20px;
+        }
+        .step-text h3 {
+            font-size: 1.2em;
+            color: #2d3748;
+            margin-top: 25px;
+            margin-bottom: 10px;
         }
         .step-text p, .step-text li {
             line-height: 1.8;
@@ -75,17 +73,74 @@
             margin-bottom: 10px;
         }
         
-        /* --- 图片样式 (从您的代码中借鉴) --- */
+        /* --- 图片样式 --- */
         .step-image img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
             border: 1px solid #e2e8f0;
-            display: block; /* 确保图片正确显示 */
-            margin: 0 auto 15px auto; /* 图片间自动居中并增加下间距 */
+            display: block; 
+            margin: 0 auto 15px auto; /* 居中并增加下间距 */
         }
         .step-image img:last-child {
             margin-bottom: 0;
+        }
+        
+        /* --- 特殊区块样式 (提示/联系) --- */
+        .info-box, .contact-box {
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .info-box {
+            background-color: #fffbeb; /* 黄色提示 */
+            border: 1px solid #fde68a;
+            color: #b45309;
+        }
+        .info-box strong {
+            color: #92400e;
+        }
+        .contact-box {
+            background-color: #f0fdf4; /* 绿色联系 */
+            border: 1px solid #bbf7d0;
+            text-align: center;
+        }
+        .contact-box p {
+            margin: 5px 0;
+            color: #15803d;
+        }
+        .contact-box code {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #166534;
+            display: block;
+            margin: 10px 0;
+        }
+
+        /* 危险/警告样式 */
+        .danger-text {
+            color: #c53030;
+            font-weight: bold;
+        }
+        .danger-title {
+            color: #c53030;
+            border-color: #fecaca !important;
+        }
+
+        /* 链接按钮样式 */
+        .pay-button {
+            display: inline-block;
+            background-color: #3182ce;
+            color: white !important;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .pay-button:hover {
+            background-color: #2b6cb0;
+            text-decoration: none;
         }
 
     </style>
@@ -94,41 +149,96 @@
 
     <div class="container">
         
-        <h1>GPT人工代付链接流程，请看完后再下单，提高效率  （自动ID缺货应急方案）</h1>
+        <h1>人工代付充值方案 (卡密售罄时)</h1>
 
-        <div class="step-block">
-            <div class="step-text">
-                <p>此方案是自动卡密售罄时充值方案，无需上号！</p>
-   <p>如果不着急也可等自动卡密补货！</p>
-<p>请先看一遍图文流程（如果图不显示联系客服）再下单，发正确GPT代付账单链接和付款后的订单号核销，能大大节省时间！</p>
-            </div>
-            <div class="step-image">
-                <img src="rg/01.PNG" alt="01">
-               <img src="rg/02.PNG" alt="02">
-                 <p>如果不是20美金的账单请切换美国地区再点获取！</p>
-                 <img src="rg/20.PNG" alt="20">
-                    <p>如果有0美金的活动的请不要下单，代付不了!</p>
-                  <img src="rg/03.png" alt="03">
-                <p>这里需要注意，请留意自己的网址，如果出来是上面这样格式的（pay.openai.com开头且确认账单是20美金的）</p>
-            </div>
+        <div class="info-box">
+            <p><strong>此方案是自动卡密售罄时充值方案，无需上号！</strong></p>
+            <p>如果不着急也可等自动卡密补货！</p>
+            <p style="margin-top: 10px;"><strong>请先看一遍图文流程</strong> (如果图不显示联系客服)再下单，发正确GPT代付账单链接和付款后的订单号核销，能大大节省时间！</p>
         </div>
 
         <div class="step-block">
             <div class="step-text">
-                <h2 id="step3">第三步：登录您的 Chat.Gpt 账号</h2>
-                <p>为了完成充值，我们需要一个临时的授权密钥。请按以下步骤操作。</p>
+                <h2>第一步：检查账单金额</h2>
+                <p>请先获取您的账单链接。打开账单后，请仔细核对：</p>
                 <ol>
-                    <li>打开 Chat.Gpt 官方网站：<a href="https://chat.openai.com" target="_blank">https://chat.openai.com</a></li>
-                    <li>登录您自己的 Chat.Gpt 账号。</li>
+                    <li>如果不是 <strong>20美金</strong> 的账单，请切换美国地区再点获取！</li>
+                    <li><strong class="danger-text">如果有 0美金 的活动（如下图4），请不要下单，代付不了!</strong></li>
                 </ol>
             </div>
             <div class="step-image">
-                <img src="https://via.placeholder.com/600x300.png?text=请替换为+help/09.png" alt="GPT登录">
+                <img src="https://via.placeholder.com/600x300.png?text=图片1+(替换此图)" alt="图片1">
+                <img src="https://via.placeholder.com/600x300.png?text=图片2+(替换此图)" alt="图片2">
+                <img src="https://via.placeholder.com/600x300.png?text=图片3+(20美金账单示例)" alt="图片3">
+                <img src="https://via.placeholder.com/600x300.png?text=图片4+(0美金活动，请勿下单)" alt="图片4">
             </div>
         </div>
 
+        <div class="step-block">
+            <div class="step-text">
+                <h2>第二步：核对链接并付款</h2>
+                <p><strong>这一步非常重要，请留意您的账单网址：</strong></p>
+                
+                <h3>情况一：链接正确 (pay.openai.com 开头)</h3>
+                <p>如果出来是上面这样格式的（<code>pay.openai.com</code>开头且确认账单是20美金的），就可以直接付款我们的人工代付商品服务：</p>
+                <p style="text-align:center; margin: 25px 0;">
+                    <a href="https://qf.dtyuedan.cn/item/ifhrfi" target="_blank" class="pay-button">
+                        点击这里去付款 (人工代付)
+                    </a>
+                </p>
+                <p>付款完后联系客服排队处理就可以！（没啥特殊情况，几分钟内就充好一个）</p>
+                
+                <hr style="border:0; border-top: 1px solid #e2e8f0; margin: 30px 0;">
+
+                <h3>情况二：链接错误 (Chatgpt 短链)</h3>
+                <p class="danger-text">如果是下面这样的（<code>Chatgpt...</code>开头的短链接），<strong>请勿付款！</strong></p>
+                <p><strong>请联系客服</strong>发转换方法后，再付款我们的商品！</p>
+            </div>
+            <div class="step-image">
+                <p style="text-align:center; font-weight: bold; color: #333; margin-bottom: 10px;">情况一：正确的链接格式（图5）</p>
+                <img src="https://via.placeholder.com/600x300.png?text=图片5+(正确的链接格式)" alt="图片5">
+                
+                <p style="text-align:center; font-weight: bold; color: #c53030; margin-top: 30px; margin-bottom: 10px;">情况二：错误的短链接格式（图6）</p>
+                <img src="https://via.placeholder.com/600x300.png?text=图片6+(错误的短链接)" alt="图片6">
+            </div>
         </div>
 
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"8299228287ec454395ca8481acb87a6c","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+        <div class="contact-box">
+             <p style="margin-top: 0;">如遇付款或打开商品链接有问题，请联系客服</p>
+             <p>客服 QQ/微信同号</p>
+             <code>82765536</code>
+             <p style="font-size: 0.9em;">(加的人多，急事请先Q，微信防频繁通过慢！)</p>
+             <p style="margin-bottom: 0; font-size: 0.9em;">(凌晨不在线，正常在线时间 9:00 - 23:59)</p>
+        </div>
+
+        <div class="step-block">
+            <div class="step-text">
+                <h2>关于成本 (185元)</h2>
+                <p>此充值方式系正规国外银行卡代充（无需上号，充值完后你们邮箱会有官方的账单），国外卡渠道成本极高，需要的人力成本也非常高，比自助充值方式临时加了5元(现价185元)，请理解！</p>
+                <p><strong>如果不着急等自动ID补货！</strong></p>
+                <p class="danger-text">官网9月16号新规后再无低价国家，不要再对任何低价渠道有侥幸心理，小心卡bug 0元购。</p>
+            </div>
+            <div class="step-image">
+                <img src="https://via.placeholder.com/600x300.png?text=图片7+(替换此图)" alt="图片7">
+            </div>
+        </div>
+
+        <div class="step-block">
+            <div class="step-text">
+                <h2 class="danger-title">最后一步：务必取消自动订阅！</h2>
+                <p>此付款是银行卡代付，开通成功后，系统会默认开启自动订阅。</p>
+                <p class="danger-text" style="font-size: 1.2em;">请务必、务必、务必手动取消自动订阅！</p>
+                <p>请按照下图流程操作取消。</p>
+            </div>
+            <div class="step-image">
+                <img src="https://via.placeholder.com/600x300.png?text=图片8+(取消订阅步骤1)" alt="图片8">
+                <img src="https://via.placeholder.com/600x300.png?text=图片9+(取消订阅步骤2)" alt="图片9">
+                <img src="https://via.placeholder.com/600x300.png?text=图片10+(取消订阅步骤3)" alt="图片10">
+                <img src="https://via.placeholder.com/600x300.png?text=图片11+(取消订阅步骤4)" alt="图片11">
+            </div>
+        </div>
+
+    </div>
+
 </body>
 </html>
