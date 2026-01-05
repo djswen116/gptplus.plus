@@ -215,6 +215,32 @@
       word-break:break-word;
     }
 
+    .purchase-link{
+      display:block; /* Make the link a block element */
+      padding:12px 20px;
+      background-color: #007aff; /* Apple blue */
+      color: white;
+      font-size:16px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color .3s, transform .2s;
+      margin-top: 10px; /* Add margin to separate from text */
+      width: fit-content; /* Ensures the width fits the content */
+      margin-left: auto; /* Center horizontally */
+      margin-right: auto; /* Center horizontally */
+    }
+
+    .purchase-link:hover{
+      background-color: #0056b3; /* Darker blue */
+      transform: scale(1.05);
+    }
+
+    .purchase-link:active{
+      background-color: #003d7a; /* Even darker blue */
+      transform: scale(0.98);
+    }
+
     @media (max-width:360px){
       h1{ font-size:24px; }
       .container{ padding:16px; }
@@ -233,6 +259,10 @@
 
     <section class="section">
       <h2 class="section-title">充值提示</h2>
+      <p class="section-desc">
+        如未购买卡密，请点击进入购买：
+      </p>
+      <a href="https://fe.dtyuedan.cn/shop/gptplus" target="_blank" rel="noopener noreferrer" class="purchase-link">点击这里购买卡密</a>
       <p class="section-desc">
         请按卡密选择系统，如果有之前卡密3、4未使用的请找客服处理！
       </p>
@@ -292,5 +322,6 @@
     crossorigin="anonymous">
   </script>
 
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"d1a00ae81deb47f5b174a177e83344f6","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
