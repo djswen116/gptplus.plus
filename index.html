@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -38,9 +37,16 @@
       --warning-2: rgba(245, 158, 11, 0.14);
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    /* Base reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "PingFang SC",
@@ -51,10 +57,19 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+    /* Layout container */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
 
-    /* 头部区域 */
-    .header { text-align: center; padding: 60px 0 28px; position: relative; }
+    /* Header */
+    .header {
+      text-align: center;
+      padding: 60px 0 28px;
+      position: relative;
+    }
 
     .header h1 {
       color: white;
@@ -72,7 +87,7 @@
       letter-spacing: 1.6px;
     }
 
-    /* 公告框：保留最原先样式 */
+    /* Announcement banner (keep original look) */
     .announcement-banner {
       background-color: aliceblue;
       color: #1e293b;
@@ -88,10 +103,16 @@
       font-weight: 500;
     }
 
-    .announcement-banner p { margin: 5px 0; }
-    .announcement-banner a { color: #1e293b; font-weight: bold; }
+    .announcement-banner p {
+      margin: 5px 0;
+    }
 
-    /* 警示框（高级） */
+    .announcement-banner a {
+      color: #1e293b;
+      font-weight: bold;
+    }
+
+    /* Warning banner (premium) */
     .warning-banner {
       max-width: 860px;
       margin: 0 auto 30px;
@@ -138,9 +159,16 @@
       box-shadow: 0 10px 20px rgba(245, 158, 11, 0.10);
     }
 
-    .warning-icon { font-size: 1.35rem; line-height: 1; }
+    .warning-icon {
+      font-size: 1.35rem;
+      line-height: 1;
+    }
 
-    .warning-content { position: relative; z-index: 1; color: #7c2d12; }
+    .warning-content {
+      position: relative;
+      z-index: 1;
+      color: #7c2d12;
+    }
 
     .warning-head {
       display: flex;
@@ -188,7 +216,11 @@
       margin-bottom: 10px;
     }
 
-    .warning-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .warning-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
     .warning-tag {
       display: inline-flex;
@@ -231,9 +263,17 @@
       white-space: nowrap;
     }
 
-    .warning-foot { font-size: 0.95rem; font-weight: 700; color: rgba(124, 45, 18, 0.9); }
-    .warning-foot strong { font-weight: 900; }
+    .warning-foot {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: rgba(124, 45, 18, 0.9);
+    }
 
+    .warning-foot strong {
+      font-weight: 900;
+    }
+
+    /* Main card container */
     .main-content {
       background: var(--card);
       border-radius: 24px;
@@ -242,7 +282,7 @@
       margin-bottom: 50px;
     }
 
-    /* 产品展示区 */
+    /* Hero / Product section */
     .product-section {
       background: linear-gradient(135deg, var(--blue-1) 0%, var(--blue-2) 100%);
       color: white;
@@ -264,8 +304,13 @@
     }
 
     @keyframes float {
-      0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
-      50% { transform: translate(-50%, -50%) rotate(180deg); }
+      0%, 100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+
+      50% {
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
     }
 
     .product-badge {
@@ -304,7 +349,11 @@
       flex-wrap: wrap;
     }
 
-    .price-prefix { font-size: 1.5rem; font-weight: 700; opacity: 0.9; }
+    .price-prefix {
+      font-size: 1.5rem;
+      font-weight: 700;
+      opacity: 0.9;
+    }
 
     .price-amount {
       font-size: 4.5rem;
@@ -317,7 +366,11 @@
       line-height: 1;
     }
 
-    .price-suffix { font-size: 1.2rem; font-weight: 700; opacity: 0.9; }
+    .price-suffix {
+      font-size: 1.2rem;
+      font-weight: 700;
+      opacity: 0.9;
+    }
 
     .help-btn {
       display: inline-block;
@@ -336,7 +389,10 @@
       border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
-    .help-btn:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); }
+    .help-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
 
     .product-period {
       font-size: 1.2rem;
@@ -347,8 +403,11 @@
       font-weight: 700;
     }
 
-    /* 购买选项 */
-    .purchase-section { padding: 50px 40px; background: white; }
+    /* Purchase section */
+    .purchase-section {
+      padding: 50px 40px;
+      background: white;
+    }
 
     .purchase-title {
       font-size: 1.8rem;
@@ -390,12 +449,24 @@
       transition: left 0.5s;
     }
 
-    .purchase-btn:hover::before { left: 100%; }
+    .purchase-btn:hover::before {
+      left: 100%;
+    }
 
-    .purchase-btn.primary { background: linear-gradient(135deg, var(--blue-1) 0%, var(--blue-2) 100%); color: white; }
-    .purchase-btn.secondary { background: linear-gradient(135deg, #4da6ff 0%, var(--blue-1) 100%); color: white; }
+    .purchase-btn.primary {
+      background: linear-gradient(135deg, var(--blue-1) 0%, var(--blue-2) 100%);
+      color: white;
+    }
 
-    .purchase-btn:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); }
+    .purchase-btn.secondary {
+      background: linear-gradient(135deg, #4da6ff 0%, var(--blue-1) 100%);
+      color: white;
+    }
+
+    .purchase-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
 
     .purchase-btn h3 {
       font-size: 1.3rem;
@@ -406,10 +477,19 @@
       letter-spacing: -0.3px;
     }
 
-    .purchase-btn p { opacity: 0.9; font-size: 1rem; position: relative; z-index: 2; font-weight: 700; }
+    .purchase-btn p {
+      opacity: 0.9;
+      font-size: 1rem;
+      position: relative;
+      z-index: 2;
+      font-weight: 700;
+    }
 
-    /* 保障信息 */
-    .guarantee-section { padding: 50px 40px; background: linear-gradient(135deg, #f0f7ff 0%, #e6f2ff 100%); }
+    /* Guarantee section */
+    .guarantee-section {
+      padding: 50px 40px;
+      background: linear-gradient(135deg, #f0f7ff 0%, #e6f2ff 100%);
+    }
 
     .guarantee-title {
       font-size: 1.8rem;
@@ -437,9 +517,17 @@
       border: 1px solid rgba(0, 122, 255, 0.1);
     }
 
-    .guarantee-item:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0, 122, 255, 0.15); border-color: var(--blue-1); }
+    .guarantee-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 122, 255, 0.15);
+      border-color: var(--blue-1);
+    }
 
-    .guarantee-icon { font-size: 1.8rem; margin-right: 18px; margin-top: 3px; }
+    .guarantee-icon {
+      font-size: 1.8rem;
+      margin-right: 18px;
+      margin-top: 3px;
+    }
 
     .guarantee-text h4 {
       color: #1e293b;
@@ -449,10 +537,19 @@
       letter-spacing: -0.3px;
     }
 
-    .guarantee-text p { color: #64748b; font-size: 1rem; line-height: 1.5; font-weight: 600; }
+    .guarantee-text p {
+      color: #64748b;
+      font-size: 1rem;
+      line-height: 1.5;
+      font-weight: 600;
+    }
 
-    /* 视频教程区域 */
-    .video-section { padding: 50px 40px; background: #fff; text-align: center; }
+    /* Video section */
+    .video-section {
+      padding: 50px 40px;
+      background: #fff;
+      text-align: center;
+    }
 
     .video-title {
       font-size: 1.8rem;
@@ -462,11 +559,19 @@
       letter-spacing: -0.5px;
     }
 
-    .video-container { max-width: 800px; margin: 0 auto; }
+    .video-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-    .video-player { width: 100%; height: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); }
+    .video-player {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
 
-    /* 底部特色 */
+    /* Features */
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -485,17 +590,37 @@
       border: 1px solid rgba(0, 122, 255, 0.2);
     }
 
-    .feature-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0, 122, 255, 0.2); border-color: var(--blue-1); }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 122, 255, 0.2);
+      border-color: var(--blue-1);
+    }
 
-    .feature-icon { font-size: 2.5rem; margin-bottom: 18px; display: block; }
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 18px;
+      display: block;
+    }
 
-    .feature-card h4 { color: #1e293b; font-weight: 900; margin-bottom: 10px; font-size: 1.2rem; letter-spacing: -0.3px; }
-    .feature-card p { color: #64748b; font-size: 1rem; line-height: 1.5; font-weight: 600; }
+    .feature-card h4 {
+      color: #1e293b;
+      font-weight: 900;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      letter-spacing: -0.3px;
+    }
 
-    /* ✅ 底部左右两侧提示：不遮挡内容（pointer-events: none） */
+    .feature-card p {
+      color: #64748b;
+      font-size: 1rem;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+
+    /* Bottom side scroll hints (non-clickable; safe areas supported) */
     .idle-hint-side {
       position: fixed;
-      bottom: 14px;
+      bottom: calc(14px + env(safe-area-inset-bottom));
       z-index: 999;
       padding: 10px 12px;
       border-radius: 999px;
@@ -523,48 +648,339 @@
       -webkit-user-select: none;
     }
 
-    .idle-hint-side.left { left: 14px; }
-    .idle-hint-side.right { right: 14px; }
+    .idle-hint-side.left {
+      left: calc(14px + env(safe-area-inset-left));
+    }
 
-    .idle-hint-side .chev { display: inline-block; font-size: 1.05rem; animation: hintBounce 1.2s ease-in-out infinite; }
+    .idle-hint-side.right {
+      right: calc(14px + env(safe-area-inset-right));
+    }
 
-    .idle-hint-side.hide { opacity: 0; visibility: hidden; transform: translateY(10px); }
+    .idle-hint-side .chev {
+      display: inline-block;
+      font-size: 1.05rem;
+      animation: hintBounce 1.2s ease-in-out infinite;
+    }
 
+    .idle-hint-side.hide {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+    }
+
+    @keyframes hintBounce {
+      0%, 100% {
+        transform: translateY(0);
+        opacity: 0.95;
+      }
+
+      50% {
+        transform: translateY(6px);
+        opacity: 1;
+      }
+    }
+
+    /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
-      .idle-hint-side .chev { animation: none; }
-      html { scroll-behavior: auto; }
+      .idle-hint-side .chev {
+        animation: none;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
     }
 
-    /* 移动端优化 */
+    /* Mobile optimization (stronger + cleaner spacing) */
     @media (max-width: 480px) {
-      .container { padding: 10px; }
-      .header { padding: 30px 0 16px; }
-      .header h1 { font-size: 1.8rem; margin-bottom: 15px; }
-      .header .subtitle { font-size: 1rem; letter-spacing: 1px; }
+      .container {
+        padding: 10px;
+      }
 
-      .announcement-banner { font-size: 0.9rem; padding: 10px 15px; border-radius: 8px; margin: -8px auto 14px; }
+      .header {
+        padding: 28px 0 16px;
+      }
 
-      .purchase-options { grid-template-columns: 1fr; gap: 15px; margin-bottom: 25px; }
-      .guarantee-list { grid-template-columns: 1fr; gap: 15px; }
-      .features { grid-template-columns: 1fr; gap: 15px; padding: 0 20px 30px; }
+      .header h1 {
+        font-size: 1.85rem;
+        margin-bottom: 10px;
+      }
 
-      .product-section, .purchase-section, .guarantee-section, .video-section { padding: 30px 20px; }
+      .header .subtitle {
+        font-size: 0.98rem;
+        letter-spacing: 1px;
+        line-height: 1.55;
+      }
 
-      .idle-hint-side { bottom: 12px; padding: 9px 10px; font-size: 0.9rem; }
-      .idle-hint-side.left { left: 12px; }
-      .idle-hint-side.right { right: 12px; }
+      /* Make the "WeChat" link more thumb-friendly on mobile */
+      .header .subtitle a {
+        margin-top: 10px !important;
+        margin-left: 0 !important;
+        padding: 8px 12px !important;
+        border-radius: 12px !important;
+      }
+
+      .announcement-banner {
+        font-size: 0.92rem;
+        padding: 12px 12px;
+        border-radius: 10px;
+        margin: -8px auto 14px;
+      }
+
+      .warning-banner {
+        margin: 0 auto 18px;
+        border-radius: 12px;
+      }
+
+      .warning-inner {
+        grid-template-columns: 44px 1fr;
+        gap: 12px;
+        padding: 14px 14px 12px;
+      }
+
+      .warning-icon-wrap {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+      }
+
+      .warning-icon {
+        font-size: 1.1rem;
+      }
+
+      .warning-title {
+        font-size: 1.02rem;
+      }
+
+      .warning-desc {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+      }
+
+      /* Stack tags + CTA vertically to avoid wrapping chaos */
+      .warning-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+
+      .warning-tags {
+        gap: 8px;
+      }
+
+      .warning-tag {
+        font-size: 0.88rem;
+        padding: 7px 10px;
+      }
+
+      .warning-cta {
+        width: 100%;
+        padding: 12px 14px;
+      }
+
+      .warning-foot {
+        font-size: 0.9rem;
+      }
+
+      .main-content {
+        border-radius: 18px;
+      }
+
+      .product-section,
+      .purchase-section,
+      .guarantee-section,
+      .video-section {
+        padding: 28px 18px;
+      }
+
+      .product-badge {
+        font-size: 0.9rem;
+        padding: 10px 16px;
+        margin-bottom: 14px;
+      }
+
+      .product-title {
+        font-size: 1.45rem;
+        margin-bottom: 12px;
+      }
+
+      /* Force price line into compact, readable layout */
+      .product-price {
+        gap: 6px;
+      }
+
+      .price-prefix,
+      .price-suffix {
+        font-size: 1rem;
+      }
+
+      .price-amount {
+        font-size: 3rem;
+      }
+
+      /* Full-width primary action on mobile */
+      .help-btn {
+        width: 100%;
+        max-width: 360px;
+        padding: 12px 16px;
+        font-size: 1rem;
+        border-radius: 16px;
+        margin: 18px auto 0;
+      }
+
+      .product-period {
+        font-size: 0.95rem;
+        line-height: 1.55;
+        margin-top: 10px;
+      }
+
+      .purchase-title {
+        font-size: 1.25rem;
+        margin-bottom: 18px;
+      }
+
+      .purchase-options {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-bottom: 18px;
+      }
+
+      .purchase-btn {
+        padding: 18px 14px;
+        border-radius: 14px;
+      }
+
+      .purchase-btn h3 {
+        font-size: 1.08rem;
+        margin-bottom: 6px;
+      }
+
+      .purchase-btn p {
+        font-size: 0.92rem;
+      }
+
+      .guarantee-title {
+        font-size: 1.25rem;
+        margin-bottom: 18px;
+      }
+
+      .guarantee-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .guarantee-item {
+        padding: 16px 14px;
+        border-radius: 14px;
+      }
+
+      .guarantee-icon {
+        font-size: 1.45rem;
+        margin-right: 12px;
+      }
+
+      .guarantee-text h4 {
+        font-size: 1rem;
+        margin-bottom: 6px;
+      }
+
+      .guarantee-text p {
+        font-size: 0.92rem;
+      }
+
+      .video-title {
+        font-size: 1.25rem;
+        margin-bottom: 16px;
+      }
+
+      .video-player {
+        border-radius: 14px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 0 18px 28px;
+      }
+
+      .feature-card {
+        padding: 20px 14px;
+        border-radius: 16px;
+      }
+
+      .feature-icon {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      .feature-card h4 {
+        font-size: 1.05rem;
+      }
+
+      .feature-card p {
+        font-size: 0.92rem;
+      }
+
+      /* Make hints smaller on mobile to reduce intrusion */
+      .idle-hint-side {
+        bottom: calc(10px + env(safe-area-inset-bottom));
+        padding: 8px 10px;
+        font-size: 0.88rem;
+      }
+
+      .idle-hint-side.left {
+        left: calc(10px + env(safe-area-inset-left));
+      }
+
+      .idle-hint-side.right {
+        right: calc(10px + env(safe-area-inset-right));
+      }
+
+      .idle-hint-side .chev {
+        font-size: 0.95rem;
+      }
+
+      /* Touch UX */
+      a,
+      button {
+        -webkit-tap-highlight-color: transparent;
+      }
     }
 
-    /* 中等屏幕 */
+    /* Tablet optimization */
     @media (min-width: 481px) and (max-width: 768px) {
-      .container { padding: 15px; }
-      .header { padding: 40px 0 18px; }
-      .header h1 { font-size: 2.5rem; }
-      .header .subtitle { font-size: 1.2rem; letter-spacing: 1.5px; }
+      .container {
+        padding: 15px;
+      }
 
-      .announcement-banner { font-size: 1rem; padding: 12px 18px; margin: -8px auto 16px; }
-      .purchase-options { grid-template-columns: 1fr; gap: 20px; }
-      .guarantee-list { grid-template-columns: 1fr; gap: 20px; }
+      .header {
+        padding: 40px 0 18px;
+      }
+
+      .header h1 {
+        font-size: 2.5rem;
+      }
+
+      .header .subtitle {
+        font-size: 1.2rem;
+        letter-spacing: 1.5px;
+      }
+
+      .announcement-banner {
+        font-size: 1rem;
+        padding: 12px 18px;
+        margin: -8px auto 16px;
+      }
+
+      .purchase-options {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .guarantee-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
     }
   </style>
 </head>
@@ -583,7 +999,7 @@
       </div>
     </header>
 
-    <!-- 目标锚点保留（不影响其他） -->
+    <!-- Anchor target (kept; no visual impact) -->
     <div id="topNotice"></div>
 
     <div class="announcement-banner">
@@ -734,7 +1150,7 @@
     <p style="margin: 0;">© 2024 . 本站仅提供Chat.Gpt Plus 充值服务.与 Open.AI公司无关联关系</p>
   </footer>
 
-  <!-- ✅ 底部左右两侧：下滑提示（不影响点击） -->
+  <!-- Bottom side hints (do not block clicks) -->
   <div id="idleHintLeft" class="idle-hint-side left" role="status" aria-live="polite">
     下滑查看更多 <span class="chev">↓</span>
   </div>
@@ -743,8 +1159,11 @@
   </div>
 
   <script>
-    // ✅ 稳定版：滚动中隐藏，停下后显示；左右两侧同时控制
-    // ✅ 同时：用户在点任何按钮/链接时，也会短暂隐藏，避免干扰视线
+    // Stable version:
+    // - Hide while scrolling
+    // - Show after idle
+    // - Only within the top area (first ~2.2 screens)
+    // - Hide briefly on any interaction to reduce distraction
     (function () {
       const left = document.getElementById("idleHintLeft");
       const right = document.getElementById("idleHintRight");
@@ -755,7 +1174,7 @@
       let lastY = window.scrollY;
       let lastChangedAt = performance.now();
 
-      // 显示范围：前 2.2 屏（顶部引导）
+      // Visible range: top 2.2 screens
       function topZone() {
         return Math.max(600, window.innerHeight * 2.2);
       }
@@ -780,10 +1199,10 @@
         requestAnimationFrame(tick);
       }
 
-      // 初始态
+      // Initial state
       if (window.scrollY <= topZone()) show(); else hide();
 
-      // 交互时隐藏一下（例如点击“加微信防失联”）
+      // Hide briefly during interactions (e.g., tapping links/buttons)
       function onInteract() {
         lastChangedAt = performance.now();
         hide();
@@ -802,7 +1221,8 @@
     })();
   </script>
 
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+  <script defer
+    src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
     integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
     data-cf-beacon='{"version":"2024.11.0","token":"d1a00ae81deb47f5b174a177e83344f6","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
     crossorigin="anonymous"></script>
