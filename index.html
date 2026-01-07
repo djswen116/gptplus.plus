@@ -159,9 +159,11 @@
       box-shadow: 0 10px 20px rgba(245, 158, 11, 0.10);
     }
 
+    /* ✅ Replace the icon: use a cleaner "sparkles" glyph */
     .warning-icon {
-      font-size: 1.35rem;
+      font-size: 1.25rem;
       line-height: 1;
+      filter: drop-shadow(0 6px 10px rgba(245, 158, 11, 0.18));
     }
 
     .warning-content {
@@ -691,28 +693,13 @@
       }
     }
 
-    /* Mobile optimization (stronger + cleaner spacing) */
+    /* Mobile optimization */
     @media (max-width: 480px) {
-      .container {
-        padding: 10px;
-      }
+      .container { padding: 10px; }
+      .header { padding: 28px 0 16px; }
+      .header h1 { font-size: 1.85rem; margin-bottom: 10px; }
+      .header .subtitle { font-size: 0.98rem; letter-spacing: 1px; line-height: 1.55; }
 
-      .header {
-        padding: 28px 0 16px;
-      }
-
-      .header h1 {
-        font-size: 1.85rem;
-        margin-bottom: 10px;
-      }
-
-      .header .subtitle {
-        font-size: 0.98rem;
-        letter-spacing: 1px;
-        line-height: 1.55;
-      }
-
-      /* Make the "WeChat" link more thumb-friendly on mobile */
       .header .subtitle a {
         margin-top: 10px !important;
         margin-left: 0 !important;
@@ -720,105 +707,30 @@
         border-radius: 12px !important;
       }
 
-      .announcement-banner {
-        font-size: 0.92rem;
-        padding: 12px 12px;
-        border-radius: 10px;
-        margin: -8px auto 14px;
-      }
+      .announcement-banner { font-size: 0.92rem; padding: 12px 12px; border-radius: 10px; margin: -8px auto 14px; }
 
-      .warning-banner {
-        margin: 0 auto 18px;
-        border-radius: 12px;
-      }
+      .warning-banner { margin: 0 auto 18px; border-radius: 12px; }
+      .warning-inner { grid-template-columns: 44px 1fr; gap: 12px; padding: 14px 14px 12px; }
+      .warning-icon-wrap { width: 44px; height: 44px; border-radius: 14px; }
+      .warning-icon { font-size: 1.1rem; }
+      .warning-title { font-size: 1.02rem; }
+      .warning-desc { font-size: 0.95rem; margin-bottom: 10px; }
 
-      .warning-inner {
-        grid-template-columns: 44px 1fr;
-        gap: 12px;
-        padding: 14px 14px 12px;
-      }
+      .warning-actions { flex-direction: column; align-items: stretch; gap: 10px; }
+      .warning-tags { gap: 8px; }
+      .warning-tag { font-size: 0.88rem; padding: 7px 10px; }
+      .warning-cta { width: 100%; padding: 12px 14px; }
+      .warning-foot { font-size: 0.9rem; }
 
-      .warning-icon-wrap {
-        width: 44px;
-        height: 44px;
-        border-radius: 14px;
-      }
+      .main-content { border-radius: 18px; }
+      .product-section, .purchase-section, .guarantee-section, .video-section { padding: 28px 18px; }
 
-      .warning-icon {
-        font-size: 1.1rem;
-      }
+      .product-badge { font-size: 0.9rem; padding: 10px 16px; margin-bottom: 14px; }
+      .product-title { font-size: 1.45rem; margin-bottom: 12px; }
+      .product-price { gap: 6px; }
+      .price-prefix, .price-suffix { font-size: 1rem; }
+      .price-amount { font-size: 3rem; }
 
-      .warning-title {
-        font-size: 1.02rem;
-      }
-
-      .warning-desc {
-        font-size: 0.95rem;
-        margin-bottom: 10px;
-      }
-
-      /* Stack tags + CTA vertically to avoid wrapping chaos */
-      .warning-actions {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-      }
-
-      .warning-tags {
-        gap: 8px;
-      }
-
-      .warning-tag {
-        font-size: 0.88rem;
-        padding: 7px 10px;
-      }
-
-      .warning-cta {
-        width: 100%;
-        padding: 12px 14px;
-      }
-
-      .warning-foot {
-        font-size: 0.9rem;
-      }
-
-      .main-content {
-        border-radius: 18px;
-      }
-
-      .product-section,
-      .purchase-section,
-      .guarantee-section,
-      .video-section {
-        padding: 28px 18px;
-      }
-
-      .product-badge {
-        font-size: 0.9rem;
-        padding: 10px 16px;
-        margin-bottom: 14px;
-      }
-
-      .product-title {
-        font-size: 1.45rem;
-        margin-bottom: 12px;
-      }
-
-      /* Force price line into compact, readable layout */
-      .product-price {
-        gap: 6px;
-      }
-
-      .price-prefix,
-      .price-suffix {
-        font-size: 1rem;
-      }
-
-      .price-amount {
-        font-size: 3rem;
-      }
-
-      /* Full-width primary action on mobile */
       .help-btn {
         width: 100%;
         max-width: 360px;
@@ -828,159 +740,52 @@
         margin: 18px auto 0;
       }
 
-      .product-period {
-        font-size: 0.95rem;
-        line-height: 1.55;
-        margin-top: 10px;
-      }
+      .product-period { font-size: 0.95rem; line-height: 1.55; margin-top: 10px; }
 
-      .purchase-title {
-        font-size: 1.25rem;
-        margin-bottom: 18px;
-      }
+      .purchase-title { font-size: 1.25rem; margin-bottom: 18px; }
+      .purchase-options { grid-template-columns: 1fr; gap: 14px; margin-bottom: 18px; }
+      .purchase-btn { padding: 18px 14px; border-radius: 14px; }
+      .purchase-btn h3 { font-size: 1.08rem; margin-bottom: 6px; }
+      .purchase-btn p { font-size: 0.92rem; }
 
-      .purchase-options {
-        grid-template-columns: 1fr;
-        gap: 14px;
-        margin-bottom: 18px;
-      }
+      .guarantee-title { font-size: 1.25rem; margin-bottom: 18px; }
+      .guarantee-list { grid-template-columns: 1fr; gap: 12px; }
+      .guarantee-item { padding: 16px 14px; border-radius: 14px; }
+      .guarantee-icon { font-size: 1.45rem; margin-right: 12px; }
+      .guarantee-text h4 { font-size: 1rem; margin-bottom: 6px; }
+      .guarantee-text p { font-size: 0.92rem; }
 
-      .purchase-btn {
-        padding: 18px 14px;
-        border-radius: 14px;
-      }
+      .video-title { font-size: 1.25rem; margin-bottom: 16px; }
+      .video-player { border-radius: 14px; }
 
-      .purchase-btn h3 {
-        font-size: 1.08rem;
-        margin-bottom: 6px;
-      }
+      .features { grid-template-columns: 1fr; gap: 12px; padding: 0 18px 28px; }
+      .feature-card { padding: 20px 14px; border-radius: 16px; }
+      .feature-icon { font-size: 2rem; margin-bottom: 10px; }
+      .feature-card h4 { font-size: 1.05rem; }
+      .feature-card p { font-size: 0.92rem; }
 
-      .purchase-btn p {
-        font-size: 0.92rem;
-      }
-
-      .guarantee-title {
-        font-size: 1.25rem;
-        margin-bottom: 18px;
-      }
-
-      .guarantee-list {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-
-      .guarantee-item {
-        padding: 16px 14px;
-        border-radius: 14px;
-      }
-
-      .guarantee-icon {
-        font-size: 1.45rem;
-        margin-right: 12px;
-      }
-
-      .guarantee-text h4 {
-        font-size: 1rem;
-        margin-bottom: 6px;
-      }
-
-      .guarantee-text p {
-        font-size: 0.92rem;
-      }
-
-      .video-title {
-        font-size: 1.25rem;
-        margin-bottom: 16px;
-      }
-
-      .video-player {
-        border-radius: 14px;
-      }
-
-      .features {
-        grid-template-columns: 1fr;
-        gap: 12px;
-        padding: 0 18px 28px;
-      }
-
-      .feature-card {
-        padding: 20px 14px;
-        border-radius: 16px;
-      }
-
-      .feature-icon {
-        font-size: 2rem;
-        margin-bottom: 10px;
-      }
-
-      .feature-card h4 {
-        font-size: 1.05rem;
-      }
-
-      .feature-card p {
-        font-size: 0.92rem;
-      }
-
-      /* Make hints smaller on mobile to reduce intrusion */
       .idle-hint-side {
         bottom: calc(10px + env(safe-area-inset-bottom));
         padding: 8px 10px;
         font-size: 0.88rem;
       }
+      .idle-hint-side.left { left: calc(10px + env(safe-area-inset-left)); }
+      .idle-hint-side.right { right: calc(10px + env(safe-area-inset-right)); }
+      .idle-hint-side .chev { font-size: 0.95rem; }
 
-      .idle-hint-side.left {
-        left: calc(10px + env(safe-area-inset-left));
-      }
-
-      .idle-hint-side.right {
-        right: calc(10px + env(safe-area-inset-right));
-      }
-
-      .idle-hint-side .chev {
-        font-size: 0.95rem;
-      }
-
-      /* Touch UX */
-      a,
-      button {
-        -webkit-tap-highlight-color: transparent;
-      }
+      a, button { -webkit-tap-highlight-color: transparent; }
     }
 
-    /* Tablet optimization */
+    /* Tablet */
     @media (min-width: 481px) and (max-width: 768px) {
-      .container {
-        padding: 15px;
-      }
+      .container { padding: 15px; }
+      .header { padding: 40px 0 18px; }
+      .header h1 { font-size: 2.5rem; }
+      .header .subtitle { font-size: 1.2rem; letter-spacing: 1.5px; }
 
-      .header {
-        padding: 40px 0 18px;
-      }
-
-      .header h1 {
-        font-size: 2.5rem;
-      }
-
-      .header .subtitle {
-        font-size: 1.2rem;
-        letter-spacing: 1.5px;
-      }
-
-      .announcement-banner {
-        font-size: 1rem;
-        padding: 12px 18px;
-        margin: -8px auto 16px;
-      }
-
-      .purchase-options {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .guarantee-list {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
+      .announcement-banner { font-size: 1rem; padding: 12px 18px; margin: -8px auto 16px; }
+      .purchase-options { grid-template-columns: 1fr; gap: 20px; }
+      .guarantee-list { grid-template-columns: 1fr; gap: 20px; }
     }
   </style>
 </head>
@@ -1010,7 +815,9 @@
 
     <div class="warning-banner" role="alert" aria-live="polite">
       <div class="warning-inner">
-        <div class="warning-icon-wrap" aria-hidden="true"><span class="warning-icon">⚠️</span></div>
+        <!-- ✅ Icon changed here (from ⚠️ to ✨) -->
+        <div class="warning-icon-wrap" aria-hidden="true"><span class="warning-icon">✨</span></div>
+
         <div class="warning-content">
           <div class="warning-head">
             <div class="warning-title">业务提醒</div>
@@ -1221,6 +1028,7 @@
     })();
   </script>
 
+  <!-- ✅ Remove duplicate beacon include; keep only one -->
   <script defer
     src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
     integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
